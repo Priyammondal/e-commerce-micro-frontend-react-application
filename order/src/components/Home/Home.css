@@ -1,0 +1,89 @@
+.order {
+  overflow-x: auto;
+  max-width: 1200px;
+  margin: 5% auto 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr {
+  transition: all 0.3s ease-in-out;
+}
+tr:not(:nth-child(1)):hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+  display: grid;
+  place-items: center;
+  z-index: 101;
+}
+
+.modal .modal-body {
+  height: 550px;
+  width: 400px;
+  background-color: whitesmoke;
+  position: relative;
+  padding: 20px;
+}
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.modal-body .product-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.modal-body .product-wrapper section:first-child {
+  height: 40%;
+}
+.modal-body .product-wrapper section:first-child img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.modal-body .product-wrapper section:last-child {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.modal button {
+  cursor: pointer;
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 767px){
+  .modal .modal-body{
+    width: 90%;
+  }
+}

@@ -1,0 +1,69 @@
+.creditCardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 4%;
+  height: 100vh;
+}
+.card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.creditCardWrapper .rccs {
+  margin: 0px;
+}
+.creditCardWrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+
+.creditCardWrapper form input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 10px;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+}
+form > div > input {
+  width: 37%;
+}
+
+.pay {
+  display: flex;
+  gap: 10px;
+}
+.pay button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.pay button:hover {
+  opacity: 0.8;
+}
+.pay .paynow {
+  flex: 2;
+  background-color: #3ba6ee;
+  color: white;
+}
+.pay .cancel {
+  flex: 1;
+  border: 1px solid #3ba6ee;
+  color: #3ba6ee;
+}
