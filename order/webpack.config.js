@@ -7,9 +7,12 @@ const deps = require("./package.json").dependencies;
 
 const printCompilationMessage = require("./compilation.config.js");
 
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8082/",
+    // publicPath: "http://localhost:8082/",
+    publicPath: "https://e-commerce-mf-order.netlify.app/",
   },
 
   resolve: {
@@ -61,6 +64,14 @@ module.exports = (_, argv) => ({
   },
 
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "public"),
+          to: path.resolve(__dirname, "dist"),
+        },
+      ],
+    }),
     new ModuleFederationPlugin({
       name: "order",
       filename: "order-app.js",

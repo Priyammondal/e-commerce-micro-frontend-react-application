@@ -10,6 +10,7 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
+    document.querySelector("body").style.overflowY = "auto";
     setProductDetails(location.state);
     if (location?.state?.orderStatus === "ordered") {
       firstStepRef.current.classList.add("firstStepDone");

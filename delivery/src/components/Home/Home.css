@@ -1,7 +1,7 @@
 .tracking {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 .tracking h1,
 h2,
@@ -17,7 +17,7 @@ h6 {
   height: 500px;
   width: 400px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-top: 10%;
+  margin-top: 5%;
   padding: 20px;
   display: flex;
   flex-direction: column;
